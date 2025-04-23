@@ -1,0 +1,61 @@
+[versions]
+agp = "8.8.0"
+espressoAccessibility = "3.6.1"
+espressoContrib = "3.6.1"
+espressoCoreVersion = "3.5.1"
+espressoIntents = "3.6.1"
+firebaseAuth = "23.1.0"
+firebaseBom = "33.8.0"
+firebaseBomVersion = "33.9.0"
+glide = "4.16.0"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.7.0"
+material = "1.12.0"
+activity = "1.10.0"
+constraintlayout = "2.2.1"
+googleGmsGoogleServices = "4.4.2"
+firebaseDatabase = "21.0.0"
+junitJunit = "4.13.2"
+monitor = "1.7.2"
+rules = "1.6.1"
+rulesVersion = "1.0.2"
+runner = "1.6.2"
+junitJupiter = "5.12.1"
+uiautomator = "2.3.0"
+
+[libraries]
+androidx-espresso-intents = { module = "androidx.test.espresso:espresso-intents", version.ref = "espressoIntents" }
+androidx-idling-concurrent = { module = "androidx.test.espresso.idling:idling-concurrent", version.ref = "espressoAccessibility" }
+androidx-rules = { module = "androidx.test:rules", version.ref = "rules" }
+androidx-uiautomator = { module = "androidx.test.uiautomator:uiautomator", version.ref = "uiautomator" }
+compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }
+espresso-accessibility = { module = "androidx.test.espresso:espresso-accessibility", version.ref = "espressoAccessibility" }
+espresso-contrib = { module = "androidx.test.espresso:espresso-contrib", version.ref = "espressoContrib" }
+espresso-core-v351 = { module = "androidx.test.espresso:espresso-core", version.ref = "espressoCoreVersion" }
+firebase-auth = { module = "com.google.firebase:firebase-auth", version.ref = "firebaseAuth" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+firebase-bom-v3390 = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBomVersion" }
+firebase-perf = { module = "com.google.firebase:firebase-perf" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+google-firebase-auth = { module = "com.google.firebase:firebase-auth" }
+google-firebase-database = { module = "com.google.firebase:firebase-database" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
+junit-junit = { group = "junit", name = "junit", version.ref = "junitJunit" }
+monitor = { group = "androidx.test", name = "monitor", version.ref = "monitor" }
+runner = { module = "androidx.test:runner", version.ref = "runner" }
+test-rules = { module = "com.android.support.test:rules", version.ref = "rulesVersion" }
+junit-jupiter = { group = "org.junit.jupiter", name = "junit-jupiter", version.ref = "junitJupiter" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
+

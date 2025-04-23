@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">RecipeApp</string>
+    <string-array name="categories">
+        <item>Завтрак</item>
+        <item>Обед</item>
+        <item>Ужин</item>
+        <item>Десерты</item>
+        <item>Напитки</item>
+    </string-array>
+</resources>

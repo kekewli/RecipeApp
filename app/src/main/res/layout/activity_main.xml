@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<LinearLayout android:id="@+id/contentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <TextView
+        android:id="@+id/appTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:text="RecipeApp"
+        android:textColor="@color/edittext_text"
+        android:textSize="26sp"
+        tools:ignore="HardcodedText,TextSizeCheck" />
+
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_border"
+        android:hint="Поиск рецептов"
+        android:importantForAutofill="no"
+        android:minHeight="48dp"
+        android:textColor="@color/edittext_text"
+        android:textColorHint="@color/edittext_hint"
+        android:inputType="text"
+        android:maxLines="1"
+        android:imeOptions="actionDone"
+        tools:ignore="HardcodedText,TextFields,VisualLintTextFieldSize" />
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addRecipeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/purple_500"
+        android:baselineAligned="false"
+        android:contentDescription="Добавить рецепт"
+        android:textColor="@color/white"
+        android:tint="@color/white"
+        app:srcCompat="@android:drawable/ic_input_add"
+        tools:ignore="HardcodedText" />
+</LinearLayout>
+    <TextView
+        android:id="@+id/easterEggZ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Z"
+        android:textSize="666sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:visibility="invisible"
+        android:alpha="0"
+        android:fontFamily="sans-serif-black"
+        tools:ignore="HardcodedText" />
+</FrameLayout>
