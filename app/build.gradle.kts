@@ -62,5 +62,6 @@ dependencies {
     androidTestImplementation(libs.androidx.rules)
     androidTestImplementation(libs.androidx.idling.concurrent)
     androidTestImplementation(libs.test.rules)
+    androidTestImplementation(libs.espresso.contrib)
 }
 apply(plugin = "com.google.gms.google-services")

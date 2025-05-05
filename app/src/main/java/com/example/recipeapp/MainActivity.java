@@ -80,53 +80,6 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("RECIPE_ID", recipeIds.get(position));
             startActivity(intent);
         });
-
-        TextView appTitleTextView = findViewById(R.id.appTitleTextView); //код гойды Z
-        TextView easterEggZ = findViewById(R.id.easterEggZ);
-        MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.goida);
-        final int[] tapCount = {0};
-        final long[] lastTapTime = {0};
-        appTitleTextView.setOnClickListener(v -> {
-            long currentTime = System.currentTimeMillis();
-            if (currentTime - lastTapTime[0] > 2000) {
-                tapCount[0] = 0;
-                easterEggZ.setAlpha(0f);
-                easterEggZ.setVisibility(View.INVISIBLE);
-                easterEggZ.setTextColor(Color.BLACK);
-                easterEggZ.getPaint().setShader(null);
-            }
-            tapCount[0]++;
-            lastTapTime[0] = currentTime;
-            if (tapCount[0] == 10) {
-                easterEggZ.setVisibility(View.VISIBLE);
-                easterEggZ.setText("Z");
-                easterEggZ.setAlpha(1f);
-                Shader textShader = new LinearGradient(
-                        0, 0, 0, easterEggZ.getTextSize(),
-                        new int[]{
-                                Color.parseColor("#FFFFFF"),
-                                Color.parseColor("#FFFFFF"),
-                                Color.parseColor("#0000FF"),
-                                Color.parseColor("#0000FF"),
-                                Color.parseColor("#FF0000"),
-                                Color.parseColor("#FF0000")
-                        },
-                        new float[]{
-                                0f, 0.55f, 0.56f, 0.84f, 0.86f, 1f
-                        },
-                        Shader.TileMode.CLAMP
-                );
-                easterEggZ.getPaint().setShader(textShader);
-                easterEggZ.invalidate();
-                mediaPlayer.start();
-                mediaPlayer.setOnCompletionListener(mp -> {
-                    easterEggZ.setVisibility(View.INVISIBLE);
-                    easterEggZ.setAlpha(0f);
-                    easterEggZ.getPaint().setShader(null);
-                    easterEggZ.invalidate();
-                });
-            }
-        });
     }
     @Override
     protected void onDestroy() {

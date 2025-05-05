@@ -120,5 +120,4 @@ public class RecipeDatabaseHelper extends SQLiteOpenHelper {
         cursor.close();
         return null;
     }
-
 }

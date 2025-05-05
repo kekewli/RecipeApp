@@ -35,6 +35,7 @@
         android:textColorHint="@color/edittext_hint"
         android:inputType="text"
         android:maxLines="1"
+        android:maxLength="50"
         android:imeOptions="actionDone"
         tools:ignore="HardcodedText,TextFields,VisualLintTextFieldSize" />
     <ListView
@@ -42,6 +43,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:maxLines="2"
+        android:maxLength="100"
         android:divider="@android:color/darker_gray"
         android:dividerHeight="1dp" />
 
