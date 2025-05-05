@@ -2,8 +2,6 @@ package com.example.recipeapp;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.LinearGradient;
-import android.graphics.Shader;
 import android.os.Bundle;
 
 import android.widget.ListView;
@@ -12,9 +10,6 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
 import android.media.MediaPlayer;
-import android.widget.TextView;
-import android.graphics.Color;
-import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;

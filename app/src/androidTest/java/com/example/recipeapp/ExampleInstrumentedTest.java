@@ -18,6 +18,7 @@ import android.content.res.Configuration;
 import android.os.SystemClock;
 import android.widget.EditText;
 
+import androidx.activity.ComponentActivity;
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
@@ -145,7 +146,7 @@ public class ExampleInstrumentedTest {
     public void tc10_ExitCreateDiscard() {
         onView(withId(R.id.addRecipeButton)).perform(click());
         onView(withId(R.id.titleEditText)).perform(replaceText("Tmp"));
-        activityRule.getScenario().onActivity(a -> a.onBackPressed());
+        activityRule.getScenario().onActivity(ComponentActivity::onBackPressed);
         onView(withText("Tmp")).check(doesNotExist());
     }
 
@@ -165,7 +166,7 @@ public class ExampleInstrumentedTest {
 
         onData(allOf(is(instanceOf(String.class)), is("Борщ"))).perform(click());
         onView(withId(R.id.titleEditText)).perform(replaceText("Tmp2"));
-        activityRule.getScenario().onActivity(a -> a.onBackPressed());
+        activityRule.getScenario().onActivity(ComponentActivity::onBackPressed);
         onView(withText("Tmp2")).check(doesNotExist());
         onView(withText("Борщ")).check(matches(isDisplayed()));
     }
