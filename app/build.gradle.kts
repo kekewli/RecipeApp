@@ -42,6 +42,9 @@ android {
             )
         }
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -63,5 +66,51 @@ dependencies {
     androidTestImplementation(libs.androidx.idling.concurrent)
     androidTestImplementation(libs.test.rules)
     androidTestImplementation(libs.espresso.contrib)
+
+    implementation(libs.androidx.appcompat.v161)
+    implementation(libs.material.v1110)
+    implementation(libs.androidx.constraintlayout.v214)
+
+    implementation(libs.okhttp)
+    implementation(libs.okhttp.v4120)
+    implementation(libs.logging.interceptor)
+
+    implementation(libs.retrofit.v2110)
+
+    implementation(libs.gson)
+    implementation(libs.picasso)
+
+    implementation(libs.ktor.client.android)
+    implementation(libs.kotlinx.serialization.json)
+
+    implementation(libs.glide.v4151)
+    annotationProcessor(libs.compiler.v4151)
+
+    implementation(libs.timber)
+
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.kotlinx.coroutines.android)
+
+    implementation(libs.androidx.room.runtime)
+    annotationProcessor(libs.androidx.room.compiler)
+
+    implementation(libs.gson)
+
+    testImplementation(libs.junit)
+    testImplementation(libs.junit.jupiter.v592)
+    androidTestImplementation(libs.androidx.junit.v115)
+    androidTestImplementation(libs.androidx.espresso.core.v370)
+    androidTestImplementation(libs.androidx.espresso.contrib.v351)
+    androidTestImplementation(libs.androidx.espresso.intents.v370)
+    androidTestImplementation(libs.androidx.runner.v152)
+    androidTestImplementation(libs.androidx.rules.v150)
+
+    implementation(libs.androidx.monitor.v161)
+    androidTestImplementation(libs.androidx.uiautomator)
+    implementation(libs.bcrypt)
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+
+    implementation(libs.commons.io)
 }
 apply(plugin = "com.google.gms.google-services")

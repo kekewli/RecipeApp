@@ -2,10 +2,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="SelectedPhotoAccess">
-
+    <!-- Интернет -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Хранилище -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="28"/>
-
+    <!-- Камера -->
+    <uses-permission android:name="android.permission.CAMERA" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -16,20 +25,34 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RecipeApp"
         tools:targetApi="31">
+        <!-- Экран входа -->
         <activity
-            android:name=".MainActivity"
+            android:name=".auth.LoginActivity"
             android:exported="true"
             android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- Регистрация -->
         <activity
-            android:name=".AddEditRecipeActivity"
+            android:name=".auth.RegisterActivity"
             android:exported="true" />
-        <profileable android:shell="true" />
+        <!-- Восстановление пароля -->
+        <activity
+            android:name=".auth.ForgotPasswordActivity"
+            android:exported="true" />
+        <!-- Основные экраны с рецептами -->
+        <activity
+            android:name=".recipes.MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".recipes.AddEditRecipeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".recipes.FavoritesActivity"
+            android:exported="false" />
     </application>
-
 </manifest>

@@ -1,36 +1,84 @@
 [versions]
 agp = "8.8.0"
+androidxEspressoCore = "3.7.0"
+androidxJunit = "1.1.5"
+androidxRules = "1.5.0"
+appcompatVersion = "1.6.1"
+bcrypt = "0.10.1"
+commonsIo = "2.16.1"
+compiler = "4.15.1"
+constraintlayoutVersion = "2.1.4"
+conventerGson = "2.11.0"
+converterGson = "2.9.0"
 espressoAccessibility = "3.6.1"
 espressoContrib = "3.6.1"
+espressoContribVersion = "3.5.1"
 espressoCoreVersion = "3.5.1"
 espressoIntents = "3.6.1"
+espressoIntentsVersion = "3.7.0"
 firebaseAuth = "23.1.0"
 firebaseBom = "33.8.0"
 firebaseBomVersion = "33.9.0"
 glide = "4.16.0"
+glideVersion = "4.15.1"
+gson = "2.10.1"
 junit = "4.13.2"
+junitJupiterVersion = "5.9.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 appcompat = "1.7.0"
+kotlinxCoroutinesAndroid = "1.7.3"
+ktorClientAndroid = "2.3.0"
+kotlinxSerializationJson = "1.5.1"
+lifecycleRuntimeKtx = "2.10.0"
+loggingInterceptor = "4.12.0"
 material = "1.12.0"
 activity = "1.10.0"
 constraintlayout = "2.2.1"
 googleGmsGoogleServices = "4.4.2"
 firebaseDatabase = "21.0.0"
 junitJunit = "4.13.2"
+materialVersion = "1.11.0"
 monitor = "1.7.2"
+monitorVersion = "1.6.1"
+okhttp = "4.11.0"
+okhttpVersion = "4.12.0"
+picasso = "2.8"
+retrofit = "2.9.0"
+retrofitVersion = "2.11.0"
+roomRuntime = "2.8.4"
 rules = "1.6.1"
 rulesVersion = "1.0.2"
 runner = "1.6.2"
 junitJupiter = "5.12.1"
+runnerVersion = "1.5.2"
+swiperefreshlayout = "1.1.0"
+timber = "5.0.1"
 uiautomator = "2.3.0"
 
 [libraries]
+androidx-appcompat-v161 = { module = "androidx.appcompat:appcompat", version.ref = "appcompatVersion" }
+androidx-constraintlayout-v214 = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayoutVersion" }
+androidx-espresso-contrib-v351 = { module = "androidx.test.espresso:espresso-contrib", version.ref = "espressoContribVersion" }
+androidx-espresso-core-v370 = { module = "androidx.test.espresso:espresso-core", version.ref = "androidxEspressoCore" }
 androidx-espresso-intents = { module = "androidx.test.espresso:espresso-intents", version.ref = "espressoIntents" }
+androidx-espresso-intents-v370 = { module = "androidx.test.espresso:espresso-intents", version.ref = "espressoIntentsVersion" }
 androidx-idling-concurrent = { module = "androidx.test.espresso.idling:idling-concurrent", version.ref = "espressoAccessibility" }
+androidx-junit-v115 = { module = "androidx.test.ext:junit", version.ref = "androidxJunit" }
+androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-monitor-v161 = { module = "androidx.test:monitor", version.ref = "monitorVersion" }
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomRuntime" }
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomRuntime" }
 androidx-rules = { module = "androidx.test:rules", version.ref = "rules" }
+androidx-rules-v150 = { module = "androidx.test:rules", version.ref = "androidxRules" }
+androidx-runner-v152 = { module = "androidx.test:runner", version.ref = "runnerVersion" }
 androidx-uiautomator = { module = "androidx.test.uiautomator:uiautomator", version.ref = "uiautomator" }
+bcrypt = { module = "at.favre.lib:bcrypt", version.ref = "bcrypt" }
+commons-io = { module = "commons-io:commons-io", version.ref = "commonsIo" }
 compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }
+compiler-v4151 = { module = "com.github.bumptech.glide:compiler", version.ref = "compiler" }
+conventer-gson = { module = "com.squareup.retrofit2:conventer-gson", version.ref = "conventerGson" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
 espresso-accessibility = { module = "androidx.test.espresso:espresso-accessibility", version.ref = "espressoAccessibility" }
 espresso-contrib = { module = "androidx.test.espresso:espresso-contrib", version.ref = "espressoContrib" }
 espresso-core-v351 = { module = "androidx.test.espresso:espresso-core", version.ref = "espressoCoreVersion" }
@@ -39,21 +87,36 @@ firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "fir
 firebase-bom-v3390 = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBomVersion" }
 firebase-perf = { module = "com.google.firebase:firebase-perf" }
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+glide-v4151 = { module = "com.github.bumptech.glide:glide", version.ref = "glideVersion" }
 google-firebase-auth = { module = "com.google.firebase:firebase-auth" }
 google-firebase-database = { module = "com.google.firebase:firebase-database" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+junit-jupiter-v592 = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junitJupiterVersion" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesAndroid" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref = "ktorClientAndroid" }
+logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "loggingInterceptor" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
 junit-junit = { group = "junit", name = "junit", version.ref = "junitJunit" }
+material-v1110 = { module = "com.google.android.material:material", version.ref = "materialVersion" }
 monitor = { group = "androidx.test", name = "monitor", version.ref = "monitor" }
+okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
+okhttp-v4120 = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttpVersion" }
+picasso = { module = "com.squareup.picasso:picasso", version.ref = "picasso" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+retrofit-v2110 = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofitVersion" }
 runner = { module = "androidx.test:runner", version.ref = "runner" }
+swiperefreshlayout = { module = "androix.swiperefreshlayout:swiperefreshlayout", version.ref = "swiperefreshlayout" }
 test-rules = { module = "com.android.support.test:rules", version.ref = "rulesVersion" }
 junit-jupiter = { group = "org.junit.jupiter", name = "junit-jupiter", version.ref = "junitJupiter" }
+timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
